@@ -1,10 +1,15 @@
-function addBigIntegers(intString) {
+function addBigIntegers(numericStrings) {
   let sum = 0;
-  for (let number of intString.split('\n')) {
-    sum += parseFloat(number);
+
+  for (const numericString of numericStrings.split('\n')) {
+    sum = addNumericString(numericString, sum)
   }
 
-  return sum.toString();
+  return sum;
 }
+
+// function addNumericString(numericString, sum) {
+  
+// }
 
 export { addBigIntegers };
