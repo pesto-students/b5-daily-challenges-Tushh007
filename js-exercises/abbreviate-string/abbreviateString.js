@@ -1,4 +1,7 @@
 function abbreviateString(str) {
+  if (typeof str !== 'string')
+    throw Error(`${str} - invalid parameters passed to the function.`);
+
   // splitting string into words
   const wordsInString = str.split(' ');
 
