@@ -9,7 +9,7 @@ function abbreviateString(str) {
   const abbreviatedLastWord =
     wordsInString[wordsInString.length - 1][0].toUpperCase() + '.';
 
-  // concatinating the words for final abbriviated string
+  // returning concatinated the words for final abbriviated string
   return `${firstWord} ${abbreviatedLastWord}`;
 }
 
