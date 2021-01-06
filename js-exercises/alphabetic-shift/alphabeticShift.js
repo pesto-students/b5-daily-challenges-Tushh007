@@ -3,8 +3,11 @@ const alphabeticShift = (input, shiftBy) => {
   let result = '';
 
   // parsing through the string and using ASCII values for incrimenting letters
-  for (const letter of input)
-    result += String.fromCharCode(letter.charCodeAt() + shiftBy);
+  for (const letter of input) {
+    if (letter === 'z') result += 'a';
+    else if (letter === 'Z') result += 'A';
+    else result += String.fromCharCode(letter.charCodeAt() + shiftBy);
+  }
 
   return result;
 };
